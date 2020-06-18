@@ -8,6 +8,7 @@ namespace ConsoleCalculatorOfCalories.BL.Model
     /// <summary>
     /// Пользователь.
     /// </summary>
+    [Serializable]
     public class User
     {
         #region Свойства
@@ -67,12 +68,12 @@ namespace ConsoleCalculatorOfCalories.BL.Model
                 throw new ArgumentNullException("Невозможная дата рождения.", nameof(birthDate));
             }
 
-            if (Weight <= 0)
+            if (weight <= 0)
             {
                 throw new ArgumentNullException("Вес не может быть меньше либо равен нулю.", nameof(weight));
             }
 
-            if (Height <= 0)
+            if (height <= 0)
             {
                 throw new ArgumentNullException("Рост не может быть меньше или равен нулю.", nameof(height));
             }
